@@ -1,0 +1,16 @@
+# Ignorar directorios node_modules y vendor
+/node_modules/
+/vendor/
+
+# Ignorar archivos de configuración sensible
+config.php
+.env
+
+# Ignorar archivos y carpetas específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de log y caché
+*.log
+*.cache
+
