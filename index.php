@@ -69,9 +69,16 @@
                 <a href="#" class="icon-shop">
                     <img src="assets/images/shopping-cart-svgrepo-com (2).svg" alt="" srcset="">
                 </a>
-                <a href="pages/welcome.html" class="icon-register">
-                    <img src="assets/images/user-3-svgrepo-com.svg" alt="" srcset="">
-                </a>
+                <?php
+                session_start();
+                if (isset($_SESSION['user'])) {
+                echo '<span class="user-name">' . $_SESSION['user'] . '</span>';
+                } else {
+                echo '<a href="pages/welcome.html" class="icon-register">
+                        <img src="assets/images/user-3-svgrepo-com.svg" alt="" srcset="">
+                      </a>';
+                }
+                ?>
             </div>
         </nav>
         <!--------------------- Fin del header -------------------------->
