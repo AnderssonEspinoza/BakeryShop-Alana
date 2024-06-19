@@ -21,12 +21,12 @@
         <nav class="menu-nav navegacion">
             <!-- Logo -->
             <div class="home-logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="../assets/images/Logo-panadera.png"
                         alt="logo coffee" class="img-logo">
                 </a>
                 <span>
-                    <a href="../index.html"> Pasteleria Alana</a>
+                    <a href="../index.php"> Pasteleria Alana</a>
                 </span>
             </div>
             <!-- Logo -->
@@ -40,21 +40,28 @@
             <!-- ----------------------- -->
 
             <div class="nav__list">
-                <a href="../index.html">Home</a>
+                <a href="../index.php">Home</a>
                 <a href="productos.html">Productos</a>
                 <a href="sobre_nosotros.html">Sobre Nosotros</a>
-                <a href="opiniones.html">Opiniones</a>
-                <a href="contactos.html">Contactos</a>
-                <a href="welcome.html">Login</a>
+                <a href="opiniones.php">Opiniones</a>
+                <a href="contactos.php">Contactos</a>
+                <a href="login-in.html">Login</a>
             </div>
             <!-- ------------------------------------------ -->
             <div class="shop-register">
                 <a href="#" class="icon-shop">
                     <img src="../assets/images/shopping-cart-svgrepo-com (2).svg" alt="" srcset="">
                 </a>
-                <a href="pages/welcome.html" class="icon-register">
-                    <img src="../assets/images/user-circle-1-svgrepo-com.svg" alt="" srcset="">
-                </a>
+                <?php
+                session_start();
+                if (isset($_SESSION['user'])) {
+                echo '<span class="user-name">' . $_SESSION['user'] . '</span>';
+                } else {
+                echo '<a href="pages/welcome.html" class="icon-register">
+                        <img src="assets/images/user-3-svgrepo-com.svg" alt="" srcset="">
+                      </a>';
+                }
+                ?>
             </div>
         </nav>
 

@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute() === TRUE) {
         // Si el registro es exitoso, iniciar sesión y redirigir
         $_SESSION['user'] = $nombre;
-        header("Location: index.php");
+        header("Location: pages/welcome.php");
         exit();
     } else {
         // Manejar errores de ejecución de la consulta

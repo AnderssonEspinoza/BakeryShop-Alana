@@ -21,12 +21,12 @@
         <nav class="menu-nav">
             <!-- Logo -->
             <div class="home-logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="../assets/images/Logo-panadera.png"
                         alt="logo coffee" class="img-logo">
                 </a>
                 <span>
-                    <a href="../index.html"> Pasteleria Alana</a>
+                    <a href="../index.php"> Pasteleria Alana</a>
                 </span>
             </div>
             <!-- Logo -->
@@ -40,28 +40,42 @@
             <!-- ----------------------- -->
 
             <div class="nav__list">
-                <a href="../index.html">Home</a>
+                <a href="../index.php">Home</a>
                 <a href="productos.html">Productos</a>
                 <a href="sobre_nosotros.html">Sobre Nosotros</a>
-                <a href="opiniones.html">Opiniones</a>
-                <a href="contactos.html">Contactos</a>
-                <a href="welcome.html">Login</a>
+                <a href="opiniones.php">Opiniones</a>
+                <a href="contactos.php">Contactos</a>
+                <!-- <a href="">Login</a> -->
             </div>
             <!-- ------------------------------------------ -->
             <div class="shop-register">
                 <a href="#" class="icon-shop">
                     <img src="../assets/images/shopping-cart-svgrepo-com (2).svg" alt="" srcset="">
                 </a>
-                <a href="pages/welcome.html" class="icon-register">
-                    <img src="../assets/images/user-3-svgrepo-com.svg" alt="" srcset="">
-                </a>
+                <?php
+                
+                if (isset($_SESSION['user'])) {
+                echo '<span class="user-name">' . $_SESSION['user'] . '</span>';
+                } else {
+                echo '<a href="pages/welcome.html" class="icon-register">
+                        <img src="assets/images/user-3-svgrepo-com.svg" alt="" srcset="">
+                      </a>';
+                }
+                ?>
             </div>
         </nav>
         <div class=" main-welcome">
             <!-- <div class="titles-img-button"> -->
                 <div class="titles titles_buttons">
                     <div class="title_2-img">
-                        <h1 class="title-1 title-2">Hola Cake Lover!</h1>
+                        <h1 class="title-1 title-2">Hola 
+                <?php 
+                session_start();
+                if (isset($_SESSION['user'])) {
+                echo '<span class="user-name">' . $_SESSION['user'] . '</span>';
+                }
+                ?> 
+                </h1>
                         <img src="../assets/images/panadera-ilustracion.png" alt="" srcset="">
 
                     </div>
@@ -73,16 +87,12 @@
                     </h4>
                     
                     <div class="container_buttons">
-                        <a href="login-in.html">
+                        <a href="productos.html">
                             <button class="button_cliente-habitual">
-                                Cliente Habitual
+                                Ir a comprar
                             </button>
                         </a>
-                        <a href="loginup.html">
-                            <button class="button_cliente-nuevo">
-                                Cliente Nuevo
-                            </button>
-                        </a>
+                        
                     </div>
                 
                 </div>
@@ -94,16 +104,12 @@
                 </div>
 <!-- Responsive -->
                 <div class="container_buttons container_button-responsive">
-                    <a href="login-in.html">
+                    <a href="productos.html">
                         <button class="button_cliente-habitual">
-                            Cliente Habitual
+                            Ir a Comprar
                         </button>
                     </a>
-                    <a href="loginup.html">
-                        <button class="button_cliente-nuevo">
-                            Cliente Nuevo
-                        </button>
-                    </a>
+                    
                 </div>
                 
             <!-- </div> -->

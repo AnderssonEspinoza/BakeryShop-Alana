@@ -646,7 +646,13 @@ body {
   transition: background-color, letter-spacing 0.7s ease-in-out;
   outline: none;
 }
+form .button-loginUp{
+  background: #7C344E;
+  text-decoration: none;
+  border: none;
+  padding: 0.6em;
 
+}
 .contact-info {
   background-color: #EEA358;
   display: flex;
@@ -1095,6 +1101,7 @@ body {
   .container-wrapper-loginup{
     margin-top: 10px;
   }
+  
   .arrow{
     margin-top: 0
   }

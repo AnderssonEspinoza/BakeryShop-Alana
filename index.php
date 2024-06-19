@@ -43,7 +43,7 @@
                         alt="logo coffee" class="img-logo">
                 </a>
                 <span>
-                    <a href="index.html"> Pasteleria Alana</a>
+                    <a href="index.php"> Pasteleria Alana</a>
                 </span>
             </div>
             <!-- Logo -->
@@ -57,12 +57,12 @@
             <!-- ----------------------- -->
 
             <div class="nav__list">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
                 <a href="pages/productos.html">Productos</a>
                 <a href="pages/sobre_nosotros.html">Sobre Nosotros</a>
-                <a href="pages/opiniones.html">Opiniones</a>
-                <a href="pages/contactos.html">Contactos</a>
-                <a href="pages/welcome.html">Login</a>
+                <a href="pages/opiniones.php">Opiniones</a>
+                <a href="pages/contactos.php">Contactos</a>
+                <a href="pages/login-in.html">Login</a>
             </div>
             <!-- ------------------------------------------ -->
             <div class="shop-register">
@@ -70,7 +70,7 @@
                     <img src="assets/images/shopping-cart-svgrepo-com (2).svg" alt="" srcset="">
                 </a>
                 <?php
-                session_start();
+                
                 if (isset($_SESSION['user'])) {
                 echo '<span class="user-name">' . $_SESSION['user'] . '</span>';
                 } else {
